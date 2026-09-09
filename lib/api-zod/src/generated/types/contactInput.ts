@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface ContactInput {
   /**
@@ -28,20 +25,3 @@ export interface ContactInput {
      */
   website?: string;
 }
-
-export type ContactSubmissionStatus = typeof ContactSubmissionStatus[keyof typeof ContactSubmissionStatus];
-
-
-export const ContactSubmissionStatus = {
-  accepted: 'accepted',
-} as const;
-
-export interface ContactSubmission {
-  status: ContactSubmissionStatus;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-}
-

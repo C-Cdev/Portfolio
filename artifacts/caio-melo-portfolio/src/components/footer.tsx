@@ -1,0 +1,6 @@
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { portfolio } from '@/data/portfolio';
+
+export function Footer() {
+  return <footer className="border-t border-[#222A27] py-8"><div className="section-shell flex flex-col gap-7 md:flex-row md:items-end md:justify-between"><div><p className="text-lg font-bold tracking-[-.06em] text-[#F3F5F4]">CAIO</p><p className="mt-2 text-xs text-[#53615b]">{portfolio.identity}</p></div><div className="flex flex-wrap items-center gap-5 text-[#53615b]"><span title="Link será adicionado posteriormente"><Github size={16} /></span><span title="Link será adicionado posteriormente"><Linkedin size={16} /></span><span title="E-mail disponível em breve"><Mail size={16} /></span><button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="group ml-2 inline-flex items-center gap-2 text-xs text-[#9BA7A2] hover:text-[#2DD4BF]" data-testid="button-back-to-top">Voltar ao topo <ArrowUp size={14} className="transition-transform group-hover:-translate-y-1" /></button></div><div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#222A27] pt-5 font-mono text-[10px] text-[#53615b] md:absolute md:mt-24 md:w-[calc(100%-48px)]"><span>© 2026 Caio</span><span>{'{ status: "always_learning" }'}</span></div></div></footer>;
+}

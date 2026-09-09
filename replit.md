@@ -1,6 +1,6 @@
-# [Project name]
+# Portfólio Caio Melo
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Portfólio pessoal em PT-BR para apresentar a formação, interesses, stack estudada, projeto real e focos atuais de Caio Melo.
 
 ## Run & Operate
 
@@ -19,26 +19,32 @@ _Replace the heading above with the project's name, and this line with one sente
 - Validation: Zod (`zod/v4`), `drizzle-zod`
 - API codegen: Orval (from OpenAPI spec)
 - Build: esbuild (CJS bundle)
+- Frontend: React + Vite + TypeScript + Tailwind CSS + Framer Motion
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/caio-melo-portfolio/src/data/portfolio.ts` — conteúdo editável do portfólio
+- `artifacts/caio-melo-portfolio/src/components/` — seções, navegação e formulário
+- `artifacts/api-server/src/routes/contact.ts` — validação e endpoint `POST /api/contact`
+- `lib/api-spec/openapi.yaml` — contrato da API e fonte do codegen
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- O conteúdo pessoal e os links ficam centralizados no data layer; links ainda não fornecidos permanecem indisponíveis na interface.
+- O formulário usa o endpoint compartilhado e um adaptador de entrega no servidor, sem acoplar o React a um provedor de e-mail.
+- A imagem do hero e as ilustrações de estudo são slots locais substituíveis, com placeholders quando os arquivos ainda não existem.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Página única responsiva com navegação desktop/mobile, Progress Pill baseada no scroll, apresentação acadêmica, stack estudada, projeto real, focos atuais, relógio de Manaus e formulário de contato preparado para envio transacional.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Manter PT-BR como idioma inicial e não inventar URLs, métricas, experiências, projetos ou informações pessoais.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Após mudanças em `lib/api-spec/openapi.yaml`, executar o codegen antes de usar os tipos/hooks atualizados.
 
 ## Pointers
 
