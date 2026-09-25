@@ -28,7 +28,7 @@ export function About() {
               {portfolio.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-5 border-t border-[#222A27] pt-6">
-              <MetaLine icon={Mail} label="E-mail" value="Disponível em breve" />
+              <MetaLine icon={Mail} label="E-mail" value="contato@caiomelo.codes" />
               <MetaLine icon={MapPin} label="Localização" value="Manaus, Amazonas, Brasil" />
             </div>
           </Reveal>

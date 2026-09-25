@@ -37,7 +37,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed left-1/2 top-5 z-50 w-[calc(100%-32px)] max-w-[720px] -translate-x-1/2 md:top-6">
+    <header className="fixed left-1/2 top-5 z-50 w-[calc(100%-32px)] max-w-[540px] -translate-x-1/2 md:top-6">
       <motion.nav
         initial={{ opacity: 0, y: -14 }}
         animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -15 }}
@@ -46,7 +46,7 @@ export function Navbar() {
         className="rounded-full border border-[#222A27] bg-[#101513]/95 px-4 py-2.5 backdrop-blur-md"
         aria-label="Navegação principal"
       >
-        <div className="flex items-center justify-between gap-5">
+        <div className="flex items-center justify-center gap-8 md:justify-between">
           <button
             type="button"
             onClick={() => go('hero')}

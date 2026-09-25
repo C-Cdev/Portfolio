@@ -14,8 +14,11 @@ function UnavailableLink({ children, label }: { children: ReactNode; label: stri
 export function HeroVisual() {
   const [hasImage, setHasImage] = useState(true);
   return (
-    <div className="relative mx-auto aspect-[4/5] w-full max-w-[450px] overflow-hidden md:aspect-[5/6]" data-testid="hero-visual">
-      <div className="absolute inset-x-[12%] bottom-0 top-[8%] overflow-hidden border-x border-[#222A27]">
+    <div 
+    className="relative mx-auto aspect-[4/5] w-full max-w-[450px] overflow-hidden md:aspect-[5/6]" 
+    data-testid="hero-visual"
+    >
+      <div className="absolute inset-x-[4%] bottom-0 top-[8%] overflow-hidden rounded-3xl border-x border-[#222A27]">
         {hasImage ? (
           <img
             src="/assets/hero-caio.jpg"
@@ -44,11 +47,11 @@ export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[760px] items-center overflow-hidden pb-20 pt-32 lg:min-h-[92vh] lg:pb-10 lg:pt-28">
       <div className="section-shell grid items-center gap-14 lg:grid-cols-[1.08fr_.92fr] lg:gap-12">
-        <div>
+        <div className="lg:-ml-12 xl:-ml-20">
           <motion.p {...enter(0)} className="mb-6 font-mono text-[11px] uppercase tracking-[.18em] text-[#2DD4BF]" data-testid="text-hero-greeting">
             Olá, eu sou o Caio.
           </motion.p>
-          <motion.h1 {...enter(.1)} className="max-w-[680px] text-[clamp(2.65rem,6vw,5.65rem)] font-extrabold leading-[.99] tracking-[-.07em] text-[#F3F5F4]" data-testid="heading-hero">
+          <motion.h1 {...enter(.1)} className="max-w-[680px] text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold leading-[.99] tracking-[-.07em] text-[#F3F5F4]" data-testid="heading-hero">
             DESENVOLVEDOR <span className="font-normal text-[#53615b]">&amp;</span><br />
             <span className="text-[#2DD4BF]">ENGENHEIRO</span> DE<br className="hidden sm:block" /> SOFTWARE
           </motion.h1>
