@@ -49,7 +49,7 @@ export function Hero() {
       <div className="section-shell grid items-center gap-14 lg:grid-cols-[1.08fr_.92fr] lg:gap-12">
         <div className="lg:-ml-12 xl:-ml-20">
           <motion.p {...enter(0)} className="mb-6 font-mono text-[11px] uppercase tracking-[.18em] text-[#2DD4BF]" data-testid="text-hero-greeting">
-            Olá, eu sou o Caio.
+            Olá, eu sou o Caio Melo.
           </motion.p>
           <motion.h1 {...enter(.1)} className="max-w-[680px] text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold leading-[.99] tracking-[-.07em] text-[#F3F5F4]" data-testid="heading-hero">
             DESENVOLVEDOR <span className="font-normal text-[#53615b]">&amp;</span><br />
